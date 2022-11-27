@@ -1,0 +1,22 @@
+{
+  "name": "whatsapp-spammer",
+  "version": "1.0.0",
+  "description": "Wapp spammer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    ":v"
+  ],
+  "author": "Alvaro Salinas Dockar",
+  "license": "MIT",
+  "dependencies": {
+    "enquirer": "^2.3.6",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.18.4"
+  },
+  "devDependencies": {
+    "@types/qrcode-terminal": "^0.12.0"
+  }
+}
