@@ -3,7 +3,7 @@ import { Client } from 'whatsapp-web.js';
 import { defaultCountryCode } from '../config';
 
 export class MessageSpammer {
-  private ONE_SECOND = 1000;
+  private HALF_SECOND = 500;
   private PROCESSING_EXTRA_TIME = 50;
 
   /**
@@ -37,11 +37,11 @@ export class MessageSpammer {
     if (numberDetails) {
       const messageInterval = setInterval(async () => {
         await client.sendMessage(numberDetails._serialized, this.message); // send message
-      }, this.ONE_SECOND);
+      }, this.HALF_SECOND);
 
       setTimeout(() => {
         clearInterval(messageInterval);
-      }, Number(this.timesToSend) * this.ONE_SECOND + this.PROCESSING_EXTRA_TIME);
+      }, Number(this.timesToSend) * this.HALF_SECOND + this.PROCESSING_EXTRA_TIME);
 
       return Number(this.timesToSend);
     } else {
